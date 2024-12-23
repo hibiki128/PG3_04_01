@@ -3,6 +3,8 @@
 
 void ClearScene::Init() {
 	inputManager_ = InputManager::GetInstance();
+	tex_ = Novice::LoadTexture("./resources/images/space.png");
+	tex2_ = Novice::LoadTexture("./resources/images/clear.png");
 }
 
 void ClearScene::Update() {
@@ -12,4 +14,7 @@ void ClearScene::Update() {
 	}
 }
 
-void ClearScene::Draw() { }
+void ClearScene::Draw() { 
+Novice::DrawSprite(280, 540, tex_, 1, 1, 0.0f, 0xffffffff);
+Novice::DrawSprite(280, 240, tex2_, 1, 1, 0.0f, 0xffffffff);
+}

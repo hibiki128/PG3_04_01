@@ -3,6 +3,7 @@
 
 void TitleScene::Init() { 
 	inputManager_ = InputManager::GetInstance();
+	tex_ = Novice::LoadTexture("./resources/images/space.png");
 }
 
 void TitleScene::Update() {
@@ -12,4 +13,6 @@ void TitleScene::Update() {
 	}
 }
 
-void TitleScene::Draw() { }
+void TitleScene::Draw() { 
+Novice::DrawSprite(280, 240, tex_, 1, 1, 0.0f, 0xffffffff);
+}
